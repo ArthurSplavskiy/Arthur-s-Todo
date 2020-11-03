@@ -5,9 +5,129 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%) no-repeat;
+  color:#333;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.mt {
+  margin-top: 5rem; 
+}
+
+.title-app {
+  width: 640px;
+  margin: 5rem auto;
+  border-bottom: 10px solid red;
+  text-align: center;
+}
+
+.title-app h1{
+  font-size: 64px;
+}
+
+.todo-container {
+  width: 640px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+@media(max-width: 768px) {
+  .todo-container {
+    width: 300px;
+  }
+  .title-app {
+    width: 300px;
+  }
+}
+
+.todo-done {
+  text-decoration: line-through;
+}
+
+.todo-list {
+  padding: 20px 0;
+  width: 100%;
+  margin: 0;
+  list-style-type: none;
+}
+
+.todo-item {
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  margin-bottom: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.delete-btn {
+  /* width: 20px; */
+  height: 20px;
+  border: none;
+  background-color: red;
+  color: #fff;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.content input {
+  width: 20px;
+  height: 20px;
+  border: 1px solid grey;
+  margin: 0 10px 0 20px;
+  border-radius: none;
+}
+
+.control {
+  margin-right: 40px;
+}
+
+.date {
+  margin-right: 20px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-field {
+  height: 40px;
+  border: none;
+  font-size: 32px;
+  outline: none;
+  border-bottom: 2px solid #333;
+  width: 77%;
+}
+
+.submit-button {
+  height: 45px;
+  width: 20%;
+  background: none;
+  border: 1px solid #333;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: none;
+}
+
+.submit-button:hover {
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+  color: #fff;
+  border: none
+}
+
+.nothing {
+  text-align: center;
 }
