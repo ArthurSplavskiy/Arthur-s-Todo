@@ -20,12 +20,12 @@ function App() {
   },[])
 
   useEffect(() => {
+    const saveLocalTodo = () => {
+      localStorage.setItem("todos", JSON.stringify(todos))
+    }
     saveLocalTodo()
   },[todos])
 
-  const saveLocalTodo = () => {
-    localStorage.setItem("todos", JSON.stringify(todos))
-  }
 
   const getLocalTodo = () => {
     if(localStorage.getItem("todos") === null) {
@@ -35,10 +35,6 @@ function App() {
       const localTodo = JSON.parse(localStorage.getItem("todos"))
       setTodos(localTodo)
     }
-  }
-
-  const saveTodo = () => {
-    localStorage.setItem('todos', todos)
   }
 
   const removeTodo = (id) => {
