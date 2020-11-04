@@ -5,7 +5,9 @@ export const TodoForm = ({ addTodo }) => {
 
     const submitHandler = (e) => {
         e.preventDefault()
-        addTodo(input.current.value)
+        if(input.current.value) {
+            addTodo(input.current.value)
+        }
         input.current.value = ''
     }
 
